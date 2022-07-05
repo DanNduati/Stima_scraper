@@ -6,6 +6,10 @@ name = "pypi"
 [packages]
 beautifulsoup4 = "*"
 requests = "*"
+black = "*"
+isort = "*"
+flake8 = "*"
+pytest = "*"
 
 [dev-packages]
 
