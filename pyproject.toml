@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "stima_scraper"
-version = "1.0.0"
+version = "1.0.2"
 authors = [
   { name="Daniel CHege Nduati", email="dannduati2@gmail.com" },
 ]
@@ -34,7 +34,7 @@ dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
 
 
 [tool.bumpver]
-current_version = "1.0.1"
+current_version = "1.0.2"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message = "bump version {old_version} -> {new_version}"
 commit = true
