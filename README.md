@@ -10,14 +10,38 @@ Stima scraper extracts and pulls scheduled power interruptions pdf data off KPLC
 ## <b>Prerequisites</b>
 - Python3
 
-## <b>Getting Started</b>
+## <b>Installation</b>
+```bash
+$ pip install --upgrade stima-scraper
+```
 
-## Demo
+## <b>Usage</b>
+```python
+from pathlib import Path
+from stimascraper.scraper import StimaScraper
+
+# PDF storage directory you can define your own path here
+PDF_FILE_PATH = Path(__file__).parent.joinpath("pdfs")
+
+
+def main():
+    scraper = StimaScraper(pdf_path=PDF_FILE_PATH)
+    scraper.scrape()
+
+
+if __name__ == "__main__":
+    main()
+
+
+```
+## <b>Demo</b>
 [![asciicast](https://asciinema.org/a/Wvq14B2GsrknPqCLUaRIvLS1F.svg)](https://asciinema.org/a/Wvq14B2GsrknPqCLUaRIvLS1F)
 
-## Built with
+## <b>Built with</b>
 - [Beautifulsoup](https://beautiful-soup-4.readthedocs.io/en/latest/)
 
 
-## <b>License</b>
+## <b>License and Copyright</b>
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](LICENSE)
+
+Copyright 2020 Daniel Chege Nduati
