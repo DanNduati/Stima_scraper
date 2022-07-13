@@ -14,7 +14,7 @@ Stima scraper extracts and pulls scheduled power interruptions pdf data off KPLC
 
 ## Demo
 <p align="center">
-<img height="300" src="images/demo.svg">
+<img src="images/demo.svg">
 </p>
 
 ## Built with
