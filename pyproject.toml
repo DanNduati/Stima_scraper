@@ -34,7 +34,7 @@ dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
 
 
 [tool.bumpver]
-current_version = "1.2.0"
+current_version = "1.0.0"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message = "bump version {old_version} -> {new_version}"
 commit = true
@@ -45,4 +45,4 @@ push = true
 "pyproject.toml" = [
     'current_version = "{version}"',
 ]
-"src/stimascraper/__about__.py" = ["{__version__}"]
+"src/stimascraper/__about__.py" = ["{version}"]
