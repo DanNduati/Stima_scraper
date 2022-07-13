@@ -5,5 +5,5 @@ __all__ = [
 ]
 
 __author__ = """Daniel Chege Nduati"""
-__version__ = "1.0.3"
+__version__ = "1.0.4"
 __copyright__ = "Copyright 2022 {}".format(__author__)
