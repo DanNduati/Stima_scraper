@@ -12,7 +12,7 @@ Stima scraper extracts and pulls scheduled power interruptions pdf data off KPLC
 
 ## <b>Installation</b>
 ```bash
-$ pip install --upgrade stima-scraper
+$ pip install stima-scraper
 ```
 
 ## <b>Usage</b>
@@ -44,4 +44,4 @@ if __name__ == "__main__":
 ## <b>License and Copyright</b>
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](LICENSE)
 
-Copyright 2020 Daniel Chege Nduati
+Copyright 2022 Daniel Chege Nduati
