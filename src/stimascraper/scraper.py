@@ -17,14 +17,13 @@ from stimascraper.exceptions import (  # isort:skip
 )
 
 URL = "https://kplc.co.ke/category/view/50/planned-power-interruptions"
-PDF_FILE_PATH = Path(__file__).parent.joinpath("pdfs")
 
 
 class StimaScraper:
-    def __init__(self, url=URL, pdf_path=PDF_FILE_PATH) -> None:
+    def __init__(self, pdf_path: str, url: str = URL) -> None:
         # self.scraper_logger = logger
         self.url = url
-        self.pdf_path = pdf_path
+        self.pdf_path = Path(pdf_path)
 
     def make_request(self, url: str) -> requests.Response:
         """Makes a http request to the interruption url
@@ -46,6 +45,14 @@ class StimaScraper:
         return response
 
     def scrape_interruptions(self) -> List[str]:
+        """Extracts all interruption pdf document urls from kplc's interruption page
+
+        Raises:
+            StimaScraperParseError: Exception raised on element parse error
+
+        Returns:
+            List: List of interruption pdf document urls
+        """
         interrupt_links = []
         page = self.make_request(self.url)
         soup = BeautifulSoup(page.content, "html.parser")
@@ -63,17 +70,7 @@ class StimaScraper:
             interruption_links = interruption_element.find_all("a")
             for interruption_link in interruption_links:
                 interrupt_links.append(interruption_link["href"])
-        return interrupt_links
-
-    def get_pdf_links(self, urls: List[str]) -> List[str]:
-        """Extracts pdf-urls from urls extracted from the blogSumary class
-
-        Args:
-            urls (List[str]): List of all urls
-        Returns:
-            List[str]: List of pdf urls
-        """
-        return list(x for x in urls if ".pdf" in x)
+        return [link for link in interrupt_links if ".pdf" in link]
 
     def download_documents(self, urls: List[str], storage_path: Path) -> None:
         """Downloads all the pdf document obtained in the interruption page links
@@ -102,8 +99,7 @@ class StimaScraper:
 
     def scrape(self) -> None:
         interruptions = self.scrape_interruptions()
-        pdf_url_list = self.get_pdf_links(interruptions)
-        self.download_documents(pdf_url_list, self.pdf_path)
+        self.download_documents(interruptions, self.pdf_path)
 
 
 def main():

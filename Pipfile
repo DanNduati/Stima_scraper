@@ -12,9 +12,9 @@ flake8 = "*"
 pytest = "*"
 pip-tools = "*"
 bumpver = "*"
-stima-scraper = {editable = true, path = "."}
 build = "*"
 twine = "*"
+stima-scraper = {editable = true, path = "."}
 
 [dev-packages]
 

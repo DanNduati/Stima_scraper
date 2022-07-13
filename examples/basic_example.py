@@ -1,8 +1,12 @@
 from pathlib import Path
+
 from stimascraper.scraper import StimaScraper
 
-# Create a "pdfs/" directory here
-PDF_FILE_PATH = Path(__file__).parent.joinpath("pdfs")
+# A "pdfs/" directory in the current working directory
+PDF_FILE_PATH = str(Path.cwd().joinpath("pdfs"))
+
+# You can specify your own pdf directory as well:
+# PDF_FILE_PATH = "/home/daniel/Desktop/pdfs"
 
 
 def main():

@@ -1,8 +1,9 @@
-from examples.basic_example import PDF_FILE_PATH
-import pytest
-
 import tempfile
 from pathlib import Path
+
+import pytest
+
+from examples.basic_example import PDF_FILE_PATH
 from stimascraper.scraper import StimaScraper
 
 
