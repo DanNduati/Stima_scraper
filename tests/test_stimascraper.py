@@ -3,6 +3,6 @@ import pytest
 
 
 def test_scrape_interruptions(test_scraper):
-    # assert len(test_scraper.scrape_interruptions()) > 0
-    # Look into this later
-    assert True
+    interruptions = test_scraper.scrape_interruptions()
+    print(interruptions)
+    assert len(interruptions) > 0
