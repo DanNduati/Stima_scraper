@@ -34,8 +34,8 @@ dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
 
 
 [tool.bumpver]
-current_version = "2022.1001-alpha"
-version_pattern = "YYYY.BUILD[-TAG]"
+current_version = "1.0.0"
+version_pattern = "MAJOR.MINOR.PATCH"
 commit_message = "bump version {old_version} -> {new_version}"
 commit = true
 tag = true
