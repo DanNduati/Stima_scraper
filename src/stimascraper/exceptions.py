@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """Custom exceptions"""
-from _logging import get_logger
+from stimascraper._logging import get_logger
 
 logger = get_logger()
 
@@ -10,7 +10,7 @@ class StimaError(Exception):
 
     def __init__(self, message) -> None:
         self.message = message
-        logger.critical("Exception raised")
+        # logger.critical("Exception raised")
 
     def __str__(self) -> str:
         return f"Stima failed with {self.message!r}"
@@ -24,12 +24,6 @@ class StimaScraperRequestError(StimaError):
 
 class StimaScraperParseError(StimaError):
     """Exception raised when there is an error in parsing elements"""
-
-    pass
-
-
-class StimaScraperNoneError(StimaError):
-    """Exception raised when the scraper can’t find a tag that you know is in the document"""
 
     pass
 

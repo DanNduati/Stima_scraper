@@ -5,7 +5,7 @@ from pathlib import Path
 from sys import stdout
 
 LOG_FILE = "scraper.log"
-LOG_FILE_PATH = Path(__file__).parent.parent.absolute().joinpath("logs")
+LOG_FILE_PATH = Path(__file__).parent.parent.parent.absolute().joinpath("logs")
 FORMATTER = logging.Formatter("%(asctime)s — %(name)s — %(levelname)s — %(message)s")
 HANDLE = "stima_scraper"
 
