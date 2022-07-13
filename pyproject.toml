@@ -8,7 +8,7 @@ version = "1.0.0"
 authors = [
   { name="Daniel CHege Nduati", email="dannduati2@gmail.com" },
 ]
-description = "A small kplc pdf scraper"
+description = "A simple kplc pdf scraper"
 readme = "README.md"
 license = { file="LICENSE" }
 

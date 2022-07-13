@@ -1,4 +1,4 @@
-from examples.example import PDF_FILE_PATH
+from examples.basic_example import PDF_FILE_PATH
 import pytest
 
 import tempfile

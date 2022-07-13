@@ -17,7 +17,7 @@ from stimascraper.exceptions import (  # isort:skip
 )
 
 URL = "https://kplc.co.ke/category/view/50/planned-power-interruptions"
-PDF_FILE_PATH = Path(__file__).parent.parent.parent.absolute().joinpath("pdfs")
+PDF_FILE_PATH = Path(__file__).parent.joinpath("pdfs")
 
 
 class StimaScraper:
